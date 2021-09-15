@@ -5,21 +5,21 @@ const app = express();
 app.set('port', (process.env.PORT || 4000));
 
 app.get('/getFecha', (req, res) => {
-  console.log('Petición de fecha');
+  console.log('Petición de fecha.');
 
   res.send(getFecha());
 
 });
 
 app.get('/getFechaCompleta', (req, res) => {
-  console.log('Petición de fecha completa');
+  console.log('Petición de fecha completa.');
 
   res.send(getFechaCompleta());
 
 });
 
 app.get('/getHora', (req, res) => {
-  console.log('Petición de hora');
+  console.log('Petición de hora.');
 
   res.send(getHora());
 
