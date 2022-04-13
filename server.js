@@ -45,7 +45,7 @@ function getFecha() {
 }
 
 function getFechaCompleta() {
-  let fechacompleta = getFecha() + ' a las ' + getHora();
+  let fechacompleta = getFecha() + ' a las ' + getHora() + ';' + getTimestamp();
 
   return fechacompleta;
 }
