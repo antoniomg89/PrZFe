@@ -11,6 +11,13 @@ app.get('/getFecha', (req, res) => {
 
 });
 
+app.get('/getFechayhora', (req, res) => {
+  console.log('Petición de fecha y hora.');
+
+  res.send(getFechayHora());
+
+});
+
 app.get('/getFechaCompleta', (req, res) => {
   console.log('Petición de fecha completa.');
 
@@ -42,6 +49,12 @@ function getFecha() {
   let fecha = moment().tz("Europe/Madrid").format('DD/MM/YYYY');
 
   return fecha;
+}
+
+function getFechayHora() {
+  let fechacompleta = getFecha() + ' a las ' + getHora();
+
+  return fechacompleta;
 }
 
 function getFechaCompleta() {
